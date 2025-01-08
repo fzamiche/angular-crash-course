@@ -10,4 +10,8 @@ export class ContactFormComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+
+  onSubmit() {
+      console.log(this.name);
+  }
 }
