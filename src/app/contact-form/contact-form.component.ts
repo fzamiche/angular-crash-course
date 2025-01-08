@@ -11,8 +11,14 @@ export class ContactFormComponent {
   email: string = '';
   message: string = '';
   isSubmitted: boolean = false;
+  formsLines: Array<any> = [];
 
   onSubmit() {
     this.isSubmitted = true;
+    this.formsLines.push({
+      'name': this.name,
+      'email': this.email,
+      'message': this.message,
+    });
   }
 }
