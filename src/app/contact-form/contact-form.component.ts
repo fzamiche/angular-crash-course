@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,8 +10,9 @@ export class ContactFormComponent {
   name: string = '';
   email: string = '';
   message: string = '';
+  isSubmitted: boolean = false;
 
   onSubmit() {
-      console.log(this.name);
+    this.isSubmitted = true;
   }
 }
