@@ -7,12 +7,16 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import {FormsModule} from "@angular/forms";
 import { MessageDetailsComponent } from './message-details/message-details.component';
 import {ContactFormService} from "./services/contact-form.service";
+import { MenuComponent } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
-    MessageDetailsComponent
+    MessageDetailsComponent,
+    MenuComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
