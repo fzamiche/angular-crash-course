@@ -15,4 +15,9 @@ export class ProductService {
     const productsUrl = `${this.baseUrl}products?limit=${limit}`; // template literal syntax (backticks ``) pour concaténer des variables dans une string : https://fakestoreapi.com/products?limit=5
     return  this.httpClient.get<Array<ProductRepresentation>>(productsUrl);
   }
+
+  createProducts(product: ProductRepresentation){
+    const productsUrl = `${this.baseUrl}products`;
+    return this.httpClient.post<ProductRepresentation>(productsUrl, product);
+  }
 }
