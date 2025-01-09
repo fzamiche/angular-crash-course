@@ -12,10 +12,14 @@ export class AboutComponent implements OnInit {
 
 
   pathVariable: any;
+  queryParam: any;
 
   ngOnInit(): void {
     console.log(this.activatedRoute);
     this.pathVariable = this.activatedRoute.snapshot.params['pathVariable'];
+    this.queryParam = this.activatedRoute
+      .snapshot
+      .queryParams['lastname'];
   }
 
 }
