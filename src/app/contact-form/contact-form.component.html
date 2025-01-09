@@ -37,6 +37,8 @@
     <app-message-details
       *ngFor="let md of messageDetails; let index = index"
       [messageDetails]="md"
+      [index]="index"
+      (delete)="deleteMessage($event)"
     ></app-message-details>
   </div>
 </div>

@@ -21,4 +21,8 @@ export class ContactFormComponent {
       'message': this.message,
     });
   }
+
+  deleteMessage(index: number) {
+    this.messageDetails.splice(index, 1); // supprime l'élément à l'index donné
+  }
 }
