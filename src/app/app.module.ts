@@ -9,8 +9,9 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
 import {ContactFormService} from "./services/contact-form.service";
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
-import { FakeApiComponent } from './fake-api/fake-api.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MessageDetailsComponent,
     MenuComponent,
     AboutComponent,
-    FakeApiComponent
+    ProductDetailsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

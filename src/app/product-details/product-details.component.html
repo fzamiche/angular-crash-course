@@ -1,0 +1,17 @@
+<div class="card h-100">
+  <img class="card-img-top" [src]="product.image" [alt]="product.title">
+  <div class="card-body d-flex flex-column">
+    <h3 class="card-title">{{ product.title }}</h3>
+    <p class="card-text text-muted">{{ product.category }}</p>
+    <p class="card-text">{{ product.description }}</p>
+    <p class="card-text fw-bold">{{ product.price | currency }}</p>
+
+    <div class="d-flex justify-content-between mt-auto">
+      <div>
+        <span class="ratting-value"> {{ product.rating?.rate }} </span>
+        <span class="ratting-count"> ({{ product.rating?.count }} reviews) </span>
+      </div>
+    </div>
+  </div>
+</div>
+

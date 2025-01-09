@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FakeApiComponent } from './fake-api.component';
+import { ProductDetailsComponent } from './product-details.component';
 
 describe('FakeApiComponent', () => {
-  let component: FakeApiComponent;
-  let fixture: ComponentFixture<FakeApiComponent>;
+  let component: ProductDetailsComponent;
+  let fixture: ComponentFixture<ProductDetailsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FakeApiComponent]
+      declarations: [ProductDetailsComponent]
     });
-    fixture = TestBed.createComponent(FakeApiComponent);
+    fixture = TestBed.createComponent(ProductDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

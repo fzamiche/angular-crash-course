@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ContactFormComponent} from "./contact-form/contact-form.component";
 import {AboutComponent} from "./about/about.component";
-import {FakeApiComponent} from "./fake-api/fake-api.component";
+import {ProductsComponent} from "./products/products.component";
 
 const routes: Routes = [
   {
@@ -18,8 +18,8 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: "fake-api",
-    component: FakeApiComponent
+    path: "products",
+    component: ProductsComponent
   }
 ];
 
