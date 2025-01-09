@@ -9,6 +9,8 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
 import {ContactFormService} from "./services/contact-form.service";
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
+import { FakeApiComponent } from './fake-api/fake-api.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,14 +18,18 @@ import { AboutComponent } from './about/about.component';
     ContactFormComponent,
     MessageDetailsComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    FakeApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [ContactFormService], // les services utilisés dans l'app doivent être déclarés ici
+  providers: [ // les services utilisés dans l'app doivent être déclarés ici
+    ContactFormService,
+    HttpClient],
   bootstrap: [AppComponent] // le premier composant à exécuter au lancement de l'app
 })
 export class AppModule { }
