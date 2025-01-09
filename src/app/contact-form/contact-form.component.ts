@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ContactFormService} from "../services/contact-form.service";
 
 @Component({
   selector: 'app-contact-form',
@@ -13,9 +14,16 @@ export class ContactFormComponent {
   isSubmitted: boolean = false;
   messageDetails: Array<any> = [];
 
+  constructor(
+    private contactFormService: ContactFormService
+  ) {
+    this.messageDetails = this.contactFormService.getAllMessages();
+    this.isSubmitted = this.messageDetails.length > 0;
+  }
+
   onSubmit() {
     this.isSubmitted = true;
-    this.messageDetails.push({
+    this.contactFormService.insertMessage({
       'name': this.name,
       'email': this.email,
       'message': this.message,
@@ -23,6 +31,6 @@ export class ContactFormComponent {
   }
 
   deleteMessage(index: number) {
-    this.messageDetails.splice(index, 1); // supprime l'élément à l'index donné
+    this.contactFormService.deleteMessage(index); // supprime l'élément à l'index donné
   }
 }
