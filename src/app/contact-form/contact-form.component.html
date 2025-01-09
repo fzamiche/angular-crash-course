@@ -1,5 +1,6 @@
 <div class="form-container">
   <h2>Contact Form</h2>
+  <!-- (ngSubmit) est un événement qui se déclenche lorsqu'un formulaire est soumis. Appel  la méthode onSubmit()-->
   <form (ngSubmit)="onSubmit()">
     <label for="name">Name:</label>
     <input type="text" id="name" [(ngModel)]="name" name="name" required/>
@@ -13,7 +14,7 @@
     <button type="submit">Submit</button>
   </form>
 
-  <div class="output" *ngIf="isSubmitted">
+  <!--<div class="output" *ngIf="isSubmitted">
     <h3>Submitted Data</h3>
     <table>
       <tr>
@@ -29,7 +30,13 @@
         <td>{{ line.message }}</td>
       </tr>
     </table>
+  </div>-->
+
+  <!--  *ngIf="isSubmitted" permet de cacher ou d'afficher le contenu de la div en fonction de la valeur de la variable isSubmitted-->
+  <div class="flex-container" *ngIf="isSubmitted">
+    <app-message-details
+      *ngFor="let md of messageDetails; let index = index"
+      [messageDetails]="md"
+    ></app-message-details>
   </div>
-
-
 </div>

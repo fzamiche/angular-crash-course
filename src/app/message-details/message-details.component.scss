@@ -1,0 +1,34 @@
+.message-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+}
+
+.message-header {
+  border-bottom: 1px solid #eee;
+  background-color: crimson;
+  color: white;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.message-header h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.message-header p {
+  margin: 0;
+}
+
+.message-content {
+  padding-top: 8px;
+}
+
+.message-content p {
+  margin: 0;
+  color: #333;
+}
+
