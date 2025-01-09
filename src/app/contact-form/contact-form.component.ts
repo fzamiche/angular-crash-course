@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {ContactFormService} from "../services/contact-form.service";
 
 @Component({
@@ -13,9 +13,10 @@ export class ContactFormComponent {
   message: string = '';
   isSubmitted: boolean = false;
   messageDetails: Array<any> = [];
-  private contactFormService: ContactFormService = inject(ContactFormService);
 
-  constructor() {
+  constructor(
+    private contactFormService: ContactFormService
+  ) {
     this.messageDetails = this.contactFormService.getAllMessages();
     this.isSubmitted = this.messageDetails.length > 0;
   }
